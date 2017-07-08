@@ -10,7 +10,7 @@ Repo contains two projects:
 ```C#
 using IPrompt;
 
-string result = IMessageBox.Show();             // shows default-like WPF-style MessageBox
+MessageBoxResult result = IMessageBox.Show();             // shows default-like WPF-style MessageBox
 string result = IInputBox.Show();               // shows WPF-style InputBox
 string result = IPasswordBox.Show();            // shows WPF-style PasswordBox
 string result = IPasswordGenerator.Generate();  // generates random password
