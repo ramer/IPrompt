@@ -50,3 +50,16 @@ Prompt.CancelText = "Отмена";
 Prompt.YesText = "Oui";
 Prompt.NoText = "Nein";
 ```
+
+### Style:
+
+```XAML
+<Application x:Class="Application"
+    xmlns:iprompt="clr-namespace:IPrompt;assembly=IPrompt"
+>
+
+    <Application.Resources>
+        <Style TargetType="{x:Type iprompt:Prompt}" BasedOn="{StaticResource {x:Type Window}}"/>
+    </Application.Resources>
+</Application>
+```
