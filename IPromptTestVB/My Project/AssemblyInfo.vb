@@ -13,7 +13,7 @@ Imports System.Windows
 
 <Assembly: AssemblyTitle("IPromptTestVB")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyCompany("Vitaliy Sorokovikov")>
 <Assembly: AssemblyProduct("IPromptTestVB")>
 <Assembly: AssemblyCopyright("Copyright ©  2017")>
 <Assembly: AssemblyTrademark("")>

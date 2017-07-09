@@ -7,11 +7,11 @@ using System.Windows;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("IMessageBox")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("IPrompt")]
+[assembly: AssemblyDescription("Adds MessageBox, InputBox, PasswordBox to your project (+password generator)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IMessageBox")]
+[assembly: AssemblyCompany("Vitaliy Sorokovikov")]
+[assembly: AssemblyProduct("IPrompt")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
