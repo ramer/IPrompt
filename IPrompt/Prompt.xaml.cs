@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Media.Imaging;
 
@@ -26,6 +28,12 @@ namespace IPrompt
         public static string YesText { get; set; }
         public static string NoText { get; set; }
 
+        private Dictionary<string, List<string>> lang = new Dictionary<string, List<string>>()
+        {
+            {"ru-RU", new List<string> {"OK","Отмена","Да","Нет" } },
+            {"en-US", new List<string> {"OK","Cancel","Yes","No" } }
+        };
+
         public Prompt()
         {
             InitializeComponent();
@@ -44,10 +52,7 @@ namespace IPrompt
             Title = string.IsNullOrEmpty(title) ? "" : title;
             tbContent.Text = string.IsNullOrEmpty(prompt) ? "" : prompt;
 
-            if (!string.IsNullOrEmpty(OKText)) { btnOK.Content = OKText; }
-            if (!string.IsNullOrEmpty(CancelText)) { btnCancel.Content = CancelText; }
-            if (!string.IsNullOrEmpty(YesText)) { btnYes.Content = YesText; }
-            if (!string.IsNullOrEmpty(NoText)) { btnNo.Content = NoText; }
+            LocalizeButtons();
 
             switch (button)
             {
@@ -105,6 +110,22 @@ namespace IPrompt
                     break;
             }
 
+        }
+
+        private void LocalizeButtons()
+        {
+            if (lang.ContainsKey(CultureInfo.CurrentCulture.Name) && lang[CultureInfo.CurrentCulture.Name].Count == 4)
+            {
+                btnOK.Content = lang[CultureInfo.CurrentCulture.Name][0];
+                btnCancel.Content = lang[CultureInfo.CurrentCulture.Name][1];
+                btnYes.Content = lang[CultureInfo.CurrentCulture.Name][2];
+                btnNo.Content = lang[CultureInfo.CurrentCulture.Name][3];
+            }
+
+            if (!string.IsNullOrEmpty(OKText)) { btnOK.Content = OKText; }
+            if (!string.IsNullOrEmpty(CancelText)) { btnCancel.Content = CancelText; }
+            if (!string.IsNullOrEmpty(YesText)) { btnYes.Content = YesText; }
+            if (!string.IsNullOrEmpty(NoText)) { btnNo.Content = NoText; }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
