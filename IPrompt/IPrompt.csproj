@@ -55,6 +55,7 @@
     </Page>
     <Compile Include="IInputBox.cs" />
     <Compile Include="IMessageBox.cs" />
+    <Compile Include="VisualBasic.cs" />
     <Compile Include="IPasswordBox.cs" />
     <Compile Include="IPasswordGenerator.cs" />
     <Compile Include="Prompt.xaml.cs">
