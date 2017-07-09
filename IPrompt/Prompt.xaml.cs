@@ -19,8 +19,12 @@ namespace IPrompt
         public MessageBoxImage icon = MessageBoxImage.None;
         public MessageBoxType type = 0;
         public string defaultResponse = "";
-
         public MessageBoxResult messageboxResult;
+
+        public static string OKText { get; set; }
+        public static string CancelText { get; set; }
+        public static string YesText { get; set; }
+        public static string NoText { get; set; }
 
         public Prompt()
         {
@@ -39,7 +43,12 @@ namespace IPrompt
             
             Title = string.IsNullOrEmpty(title) ? "" : title;
             tbContent.Text = string.IsNullOrEmpty(prompt) ? "" : prompt;
-            
+
+            if (!string.IsNullOrEmpty(OKText)) { btnOK.Content = OKText; }
+            if (!string.IsNullOrEmpty(CancelText)) { btnCancel.Content = CancelText; }
+            if (!string.IsNullOrEmpty(YesText)) { btnYes.Content = YesText; }
+            if (!string.IsNullOrEmpty(NoText)) { btnNo.Content = NoText; }
+
             switch (button)
             {
                 case MessageBoxButton.OK:

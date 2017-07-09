@@ -14,4 +14,11 @@ Class wndMain
         tblckResponse.Text = IPasswordBox("Optional IPasswordBox text", "IPasswordBox Title", "defaultpassword", vbCritical).ToString
     End Sub
 
+    Private Sub wndMain_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
+        IPrompt.Prompt.OKText = "OK"
+        IPrompt.Prompt.CancelText = "Отмена"
+        IPrompt.Prompt.YesText = "Oui"
+        IPrompt.Prompt.NoText = "Nein"
+    End Sub
+
 End Class

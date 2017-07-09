@@ -12,7 +12,7 @@ namespace IPromptTest
 
         private void btnIMessageBox_Click(object sender, RoutedEventArgs e)
         {
-            tblckResponse.Text = IMessageBox.Show("Optional messagebox text", "Optional IMessageBox Title", MessageBoxButton.OKCancel, MessageBoxImage.Information, this).ToString();
+            tblckResponse.Text = IMessageBox.Show("Optional messagebox text", "Optional IMessageBox Title", MessageBoxButton.YesNoCancel, MessageBoxImage.Information, this).ToString();
         }
 
         private void btnIInputBox_Click(object sender, RoutedEventArgs e)
@@ -23,6 +23,14 @@ namespace IPromptTest
         private void btnIPasswordBox_Click(object sender, RoutedEventArgs e)
         {
             tblckResponse.Text = IPasswordBox.Show("Optional IPasswordBox text", "IPasswordBox Title", MessageBoxImage.Exclamation, "defaultpassword").ToString();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Prompt.OKText = "OK";
+            Prompt.CancelText = "Отмена";
+            Prompt.YesText = "Oui";
+            Prompt.NoText = "Nein";
         }
     }
 }
