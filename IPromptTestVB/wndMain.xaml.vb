@@ -15,10 +15,10 @@ Class wndMain
     End Sub
 
     Private Sub wndMain_Loaded(sender As Object, e As RoutedEventArgs) Handles Me.Loaded
-        'IPrompt.Prompt.OKText = "OK"
-        'IPrompt.Prompt.CancelText = "Отмена"
-        'IPrompt.Prompt.YesText = "Oui"
-        'IPrompt.Prompt.NoText = "Nein"
+        IPrompt.Prompt.OKText = "OK"
+        IPrompt.Prompt.CancelText = "Отмена"
+        IPrompt.Prompt.YesText = "Oui"
+        IPrompt.Prompt.NoText = "Nein"
     End Sub
 
 End Class
